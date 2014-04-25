@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tax_code: MyString
+  address: MyText
+  balance: 9.99
+  active: false
+
+two:
+  name: MyString
+  tax_code: MyString
+  address: MyText
+  balance: 9.99
+  active: false

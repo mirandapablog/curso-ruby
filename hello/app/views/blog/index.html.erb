@@ -1,0 +1,10 @@
+<h1>Blog</h1>
+
+<% @posts.each do |post| %>
+<article>
+  <h1><%= post[:title] %></h1>
+  <p>
+    <%= post[:content] %>
+  </p>
+</article>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Search</h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, nil, {tabindex: 1}) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<% if @categories %>
+  <ul>
+  <% @categories.each do |category| %>
+    <li>
+      <%= category.name %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<% if @products %>
+  <ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,12 @@
+<li>
+  <%= link_to category.name, category %>
+  <% if category.products %>
+  <ul>
+    <% category.products.each do |product| %>
+    <li>
+      <%= product.name %>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+</li>

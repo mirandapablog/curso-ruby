@@ -1,0 +1,29 @@
+<h1>Super Blog</h1>
+
+<hr />
+<% unless user_logged_in? %>
+  <%= link_to("Crea tu cuenta", new_user_path) %> |
+  <%= link_to "Inicia Sesion", login_path %>
+<% else %>
+  <%= link_to "Mi Perfil", profile_path %>
+  <%= link_to "Cerrar Sesion", logout_path %>
+<% end %>
+<hr />
+
+<% if user_logged_in? %>
+<p>
+  Soy el usuario <%= current_user.email %>
+</p>
+<% end %>
+
+
+<% if @posts %>
+<ul>
+<% @posts.each do |post| %>
+<li>
+<%= link_to post.title, post %><br />
+<%= post.body %>
+</li>
+<% end %>
+</ul>
+<% end %>

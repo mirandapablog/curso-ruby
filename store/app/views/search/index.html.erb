@@ -1,0 +1,14 @@
+<h1>Search</h1>
+
+<%= form_tag("/search", method: "get", remote: true, id: "search") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<div id="results">
+</div>
+
+<%= render :partial => 'categories', :locals => {:items => @categories} %>
+
+<%= will_paginate @categories if @categories %>

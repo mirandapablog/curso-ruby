@@ -1,0 +1,8 @@
+<% unless items.blank? %>
+<h2>Categories</h2>
+<ul>
+  <% items.each do |item| %>
+    <%= render :partial => 'category', :locals => {:category => item} %>
+  <% end %>
+</ul>
+<% end %>
